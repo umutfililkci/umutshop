@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+    <!-- Meta & Stylesheet -->
+    <%- include('partials/metastylesheet',{title: "UMUTSHOP ALIŞVERİŞ SİTESİ" }) %>
+
+        <style>
+            .row .banner-inner>h2,
+            .row .banner-inner>p {
+                text-shadow: 0px 0px 5px #00000061;
+            }
+
+            .featured-product-bg {
+                background: white;
+                position: relative;
+                padding: 40px;
+                border-radius: 10px;
+            }
+        </style>
+</head>
+
+<body>
+
+    <!-- preloader area start -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="spinner">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- preloader area end -->
+    <!-- search popup start-->
+    <div class="body-overlay" id="body-overlay"></div>
+    <div class="td-search-popup" id="td-search-popup">
+        <form action="index.html" class="search-form">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Araa.....">
+            </div>
+            <button type="submit" class="submit-btn"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+    <!-- dkt-sitebar-menu end-->
+
+    <!-- dkt-sitebar-menu start-->
+    <div class="dkt-sitebar-menu">
+        <div class="dkt-sitebar-menu">
+            <a class="dkt-sitebar-close" href="#"><i class="fa fa-times"></i></a>
+            <div class="dkt-details-inner">
+                <div class="logo">
+                    <a href="index.html"><img src="img/" alt="img"></a>
+                </div>
+                <p class="details">Donsectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. </p>
+                <div class="address-inner">
+                    <h5>Address</h5>
+                    <p>3538 Cambridge Place Laurel, MD 20707</p>
+                </div>
+                <div class="address-inner">
+                    <h5></h5>
+                    <p></p>
+                </div>
+                <div class="address-inner mb-0">
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="dkt-market-earn">
+                <div class="address-inner">
+                    <h5></h5>
+                    <p></p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="earn-inner">
+                            <p></p>
+                            <h5></h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="earn-inner">
+                            <p></p>
+                            <h5></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- dkt-sitebar-menu end-->
+
+    <%- include('partials/header') %>
+
+        <!-- banner start -->
+        <div class="img/siteresim4.png">
+            <div class="container">
+                <div class="banner-area-inner">
+                    <div class="row justify-content-center">
+                        <img src="img/siteresim4.png" alt="img" class="position-absolute w-100" style="top:-60px">
+                        <div class="col-lg-8 align-self-center">
+                            <div class="banner-inner">
+                                <h2>En Ucuz ve Hızlı Alışverişin Adresi <span>UMUT </span></h2>
+                                <p>Hoş geldin! En uygun fiyatları bulmak artık daha kolay. Sana özel fiyat
+                                    karşılaştırmalarıyla tasarruf etmenin keyfini çıkar! </p>
+                                <div class="btn-wrap">
+                                    <a class="btn btn-base" href="#">Tüm Ürünler</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 align-self-center">
+                            <!-- <div class="thumb">
+                            <img src="img/siteresim4.png" alt="img" width="100">
+                        </div> -->
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-area text-center">
+                                <h3>ARADIĞIN ÜRÜNÜ BUL</h3>
+                                <form>
+                                    <input type="text" class="form-control">
+                                    <button type="submit" class="btn"><img src="img/icon/1.png" alt="img"></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- banner end -->
+
+        <!-- all-item area start -->
+        <section class="all-item-area all-item-area-2 pd-bottom-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="section-title">
+                            <h2>ÖNE ÇIKAN ÜRÜNLER</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="isotope-filters item-isotope-btn text-lg-right">
+                            <button class="button active ml-0" data-filter="*">TÜM ÜRÜNLER</button>
+                            <button class="button" data-filter=".cat-1">TEKNOLOJİK ALETLER</button>
+                            <button class="button" data-filter=".cat-2">GİYİM</button>
+                            <button class="button" data-filter=".cat-3">AKSESUAR</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="all-item-section featured-product-bg">
+                    <div class="item-iso tope row">
+
+                        <!-- gallery item start here -->
+                        <% for( let index=0; index < list.length; index++ ) { %>
+                            <% let product=list[index]; %>
+
+                                <div class="all-isotope-item col-lg-4 col-sm-6">
+                                    <div class="thumb">
+                                        <a class="gallery-fancybox" href="#">
+                                            <img src="img/item/<%= product.image %>" alt="image">
+                                        </a>
+                                        <a class="btn btn-white" href="/products/<%= product.id %>">Görüntüle</a>
+                                    </div>
+                                    <div class="item-details">
+                                        <h4><a href="#">
+                                                <%= product.name %>
+                                            </a></h4>
+                                        <p>
+                                            <%= product.category %>
+                                        </p>
+                                        <span class="ratting">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star star-o"></i>
+                                        </span>
+                                        <a href="/" class="author-details align-item-center">
+                                            <img src="img/author/1.png" alt="img">
+                                            <span>
+                                                <%= product.provider %>
+                                            </span>
+                                        </a>
+                                        <span class="price bg-white float-right">$<%= product.price %></span>
+                                    </div>
+                                </div>
+
+                                <% } %>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <a class="btn btn-base" href="/products">Daha Fazla Ürün</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- all-item area end -->
+
+        <!-- dmarket-area start -->
+        <section class="dmarket-area bg-sky-blue pd-top-90 pd-bottom-70">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-5">
+                        <div class="section-title text-center">
+                            <h2>Umutun Özellikleri</h2>
+                            <p>Modern tasarımı, kullanıcı dostu arayüzü ve hızlı erişim özellikleriyle sayfamız, size en
+                                iyi
+                                online deneyimi sunmak için özenle tasarlandı </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-dmarket-wrap">
+                            <div class="media">
+                                <div class="thumb">
+                                    <img src="img/icon/dmarket-1.png" alt="img">
+                                </div>
+                                <div class="wrap-details media-body">
+                                    <h5><a href="#">Kaliteli Platform</a></h5>
+                                    <p> Kullanıcılarına sunduğu benzersiz özellikleri ve sağladığı kesintisiz hizmet ile
+                                        dijital deneyimi mükemmel bir seviyeye taşır. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-dmarket-wrap">
+                            <div class="media">
+                                <div class="thumb bg-2">
+                                    <img src="img/icon/dmarket-2.png" alt="img">
+                                </div>
+                                <div class="wrap-details media-body">
+                                    <h5><a href="#">Hızlı Alışveriş</a></h5>
+                                    <p> Üyelikle ayrıcalıklı dünyamıza katılın; eksiksiz içerik, öncelikli destek ve
+                                        özel
+                                        avantajlarla dolu bir dijital deneyimin tadını çıkarın! </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-dmarket-wrap">
+                            <div class="media">
+                                <div class="thumb bg-3">
+                                    <img src="img/icon/dmarket-3.png" alt="img">
+                                </div>
+                                <div class="wrap-details media-body">
+                                    <h5><a href="#">Kayıt Ol</a></h5>
+                                    <p>Bilgilerinizi yükleyerek, kişiselleştirilmiş hizmetlerimizden tam anlamıyla
+                                        faydalanmaya başlayın </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- dmarket-area end -->
+
+        <!-- fun-fact-area start -->
+        <section class="fun-fact-area text-center pd-top-100" style="background: url(img/fact/bg.png);">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single-fact-wrap">
+                            <div class="thumb">
+                                <img src="img/fact/icon1.png" alt="img">
+                            </div>
+                            <h2><span class="counter">642</span></h2>
+                            <p class="fact-title">Olumlu Geri Dönüş</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single-fact-wrap style-2">
+                            <div class="thumb">
+                                <img src="img/fact/icon2.png" alt="img">
+                            </div>
+                            <h2><span class="counter">3200</span></h2>
+                            <p class="fact-title">Premium Detaylı Arama</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single-fact-wrap style-3">
+                            <div class="thumb">
+                                <img src="img/fact/icon3.png" alt="img">
+                            </div>
+                            <h2><span class="counter">1200</span></h2>
+                            <p class="fact-title">Toplam Kullanıcı</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single-fact-wrap style-4">
+                            <div class="thumb">
+                                <img src="img/fact/icon4.png" alt="img">
+                            </div>
+                            <h2><span class="counter">2500</span></h2>
+                            <p class="fact-title">Ürün Satıldı</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- fun-fact-area end -->
+
+        <!-- customer-area start -->
+        <section class="customer-area pd-top-90 pd-bottom-70">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="section-title">
+                            <h2>Binlerce Mutlu Müşteri</h2>
+                            <p>Binlerce mutlu müşteri, sunduğumuz kaliteli hizmetin ve memnuniyet garantimizin bir
+                                göstergesidir. Siz de aramıza katılarak ayrıcalıklı bir deneyimin keyfini
+                                çıkarabilirsiniz
+                            </p>
+                        </div>
+                        <div class="thumb">
+                            <img src="img/customer/1.png" alt="img">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 offset-lg-1">
+                        <div class="single-customer-wrap media">
+                            <div class="media-body">
+                                <h5>Ali Veli</h5>
+                                <p>Kullandığım en iyi site kesinlikle. </p>
+                            </div>
+                            <div class="icon align-self-end">
+                                <img src="img/icon/qoute-s.png" alt="img">
+                            </div>
+                        </div>
+                        <div class="single-customer-wrap media nesting">
+                            <div class="media-body">
+                                <h5>umut</h5>
+                                <p> </p>
+                            </div>
+                            <div class="icon align-self-end">
+                                <img src="img/icon/qoute-s.png" alt="img">
+                            </div>
+                        </div>
+                        <div class="single-customer-wrap media">
+                            <div class="media-body">
+                                <h5>Ahmet Mehmet</h5>
+                                <p> </p>
+                            </div>
+                            <div class="icon align-self-end">
+                                <img src="img/icon/qoute-s.png" alt="img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- customer-area end -->
+
+        <%- include('partials/footer2') %>
+
+            <!-- back to top area start -->
+            <div class="back-to-top">
+                <span class="back-top"><i class="fa fa-angle-up"></i></span>
+            </div>
+            <!-- back to top area end -->
+
+
+            <!-- all plugins here -->
+            <script src="js/vendor.js"></script>
+            <!-- main js  -->
+            <script src="js/main.js"></script>
+</body>
+
+</html>

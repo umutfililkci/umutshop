@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+
+    <!-- Meta & Stylesheet -->
+    <%- include('partials/metastylesheet',{title: "UMUTSHOP ALIŞVERİŞ SİTESİ" }) %>
+
+</head>
+
+<body>
+
+    <!-- preloader area start -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="spinner">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- preloader area end -->
+    <!-- search popup start-->
+    <div class="body-overlay" id="body-overlay"></div>
+    <div class="td-search-popup" id="td-search-popup">
+        <form action="index.html" class="search-form">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search.....">
+            </div>
+            <button type="submit" class="submit-btn"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+    <!-- dkt-sitebar-menu end-->
+
+    <!-- dkt-sitebar-menu start-->
+    <div class="dkt-sitebar-menu">
+        <div class="dkt-sitebar-menu">
+            <a class="dkt-sitebar-close" href="#"><i class="fa fa-times"></i></a>
+            <div class="dkt-details-inner">
+                <div class="logo">
+                    <a href="index.html"><img src="assets/img/logo-3.png" alt="img"></a>
+                </div>
+                <p class="details"> </p>
+                <div class="address-inner">
+                    <h5></h5>
+                    <p></p>
+                </div>
+                <div class="address-inner">
+                    <h5></h5>
+                    <p></p>
+                </div>
+                <div class="address-inner mb-0">
+                    <h5></h5>
+                    <p></p>
+                </div>
+            </div>
+            <div class="dkt-market-earn">
+                <div class="address-inner">
+                    <h5></h5>
+                    <p></p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="earn-inner">
+                            <p>Satılan Ürün</p>
+                            <h5>12501</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="earn-inner">
+                            <p>Total Kayıt</p>
+                            <h5>25804</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- dkt-sitebar-menu end-->
+
+    <%- include('partials/header') %>
+
+        <!-- breadcrumb start -->
+        <div class="breadcrumb-area" style="background-image : url(siteresim4.png)">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="breadcrumb-inner">
+                            <div class="section-title text-center">
+                                <h2 class="page-title">Ürünler</h2>
+                                <ul class="page-list">
+                                    <li><a href="index.html">Anasayfa</a></li>
+                                    <li>Ürünler</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- breadcrumb end -->
+
+        <!-- blog-page area start -->
+        <section class="blog-page-area pd-top-100 pd-bottom-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 order-lg-last">
+                        <div class="all-item-section all-item-area-2">
+                            <div class="row">
+                                <!-- gallery item start here -->
+
+                                <% list.forEach(product => { %>
+                                 
+                                <% }) %>
+
+                                <div class="all-isotope-item col-lg-6 col-sm-6">
+                                    <div class="thumb">
+                                        <a class="gallery-fancybox" href="#">
+                                            <img src="assets/img/item/7.png" alt="image">
+                                        </a>
+                                        <a class="btn btn-white" href="#">Live Preview</a>
+                                    </div>
+                                    <div class="item-details">
+                                        <h4><a href="#">Telefonlar</a></h4>
+                                        <p>Akıllı Telefonlar</p>
+                                        <span class="ratting">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star star-o"></i>
+                                            <span>(12)</span>
+                                        </span>
+                                        <a href="#" class="author-details align-item-center">
+                                            <img src="assets/img/author/1.png" alt="img">
+                                            <span>abc</span>
+                                        </a>
+                                        <span class="price bg-white float-right">100tl</span>
+                                    </div>
+                                </div>
+                                <div class="all-isotope-item col-lg-6 col-sm-6">
+                                    <div class="thumb">
+                                        <a class="gallery-fancybox" href="#">
+                                            <img src="assets/img/item/8.png" alt="image">
+                                        </a>
+                                        <a class="btn btn-white" href="#">Live Preview</a>
+                                    </div>
+                                    <div class="item-details">
+                                        <h4><a href="#">Kulaklıklar</a></h4>
+                                        <p></p>
+                                        <span class="ratting">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star star-o"></i>
+                                            <span>(12)</span>
+                                        </span>
+                                        <a href="#" class="author-details align-item-center">
+                                            <img src="assets/img/author/2.png" alt="img">
+                                            <span>ali veli</span>
+                                        </a>
+                                        <span class="price bg-white float-right">200 tl</span>
+                                    </div>
+                                </div>
+                                <div class="all-isotope-item col-lg-6 col-sm-6">
+                                    <div class="thumb">
+                                        <a class="gallery-fancybox" href="#">
+                                            <img src="assets/img/item/9.png" alt="image">
+                                        </a>
+                                        <a class="btn btn-white" href="#">Live Preview</a>
+                                    </div>
+                                    <div class="item-details">
+                                        <h4><a href="#"></a></h4>
+                                        <p></p>
+                                        <span class="ratting">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star star-o"></i>
+                                            <span>(12)</span>
+                                        </span>
+                                        <a href="#" class="author-details align-item-center">
+                                            <img src="assets/img/author/3.png" alt="img">
+                                            <span></span>
+                                        </a>
+                                        <span class="price bg-white float-right"></span>
+                                    </div>
+                                </div>
+                                <div class="all-isotope-item col-lg-6 col-sm-6">
+                                    <div class="thumb">
+                                        <a class="gallery-fancybox" href="#">
+                                            <img src="assets/img/item/10.png" alt="image">
+                                        </a>
+                                        <a class="btn btn-white" href="#">Live Preview</a>
+                                    </div>
+                                    <div class="item-details">
+                                        <h4><a href="#"></a></h4>
+                                        <p></p>
+                                        <span class="ratting">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star star-o"></i>
+                                            <span>(12)</span>
+                                        </span>
+                                        <a href="#" class="author-details align-item-center">
+                                            <img src="assets/img/author/4.png" alt="img">
+                                            <span></span>
+                                        </a>
+                                        <span class="price bg-white float-right"></span>
+                                    </div>
+                                </div>
+                                <div class="all-isotope-item col-lg-6 col-sm-6">
+                                    <div class="thumb">
+                                        <a class="gallery-fancybox" href="#">
+                                            <img src="assets/img/item/11.png" alt="image">
+                                        </a>
+                                        <a class="btn btn-white" href="#">Live Preview</a>
+                                    </div>
+                                    <div class="item-details">
+                                        <h4><a href="#"></a></h4>
+                                        <p></p>
+                                        <span class="ratting">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star star-o"></i>
+                                            <span>(12)</span>
+                                        </span>
+                                        <a href="#" class="author-details align-item-center">
+                                            <img src="assets/img/author/5.png" alt="img">
+                                            <span></span>
+                                        </a>
+                                        <span class="price bg-white float-right"></span>
+                                    </div>
+                                </div>
+                                <div class="all-isotope-item col-lg-6 col-sm-6">
+                                    <div class="thumb">
+                                        <a class="gallery-fancybox" href="#">
+                                            <img src="assets/img/item/12.png" alt="image">
+                                        </a>
+                                        <a class="btn btn-white" href="#">Live Preview</a>
+                                    </div>
+                                    <div class="item-details">
+                                        <h4><a href="#"></a></h4>
+                                        <p></p>
+                                        <span class="ratting">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star star-o"></i>
+                                            <span>(12)</span>
+                                        </span>
+                                        <a href="#" class="author-details align-item-center">
+                                            <img src="assets/img/author/6.png" alt="img">
+                                            <span></span>
+                                        </a>
+                                        <span class="price bg-white float-right"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pagination-wrap text-center mt-2">
+                            <ul class="pagination pagination-2">
+                                <li class="page-item"><a class="page-link" href="#"><i class="la la-angle-left"></i></a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="#">01</a></li>
+                                <li class="page-item"><a class="page-link" href="#">02</a></li>
+                                <li class="page-item"><a class="page-link" href="#">03</a></li>
+                                <li class="page-item"><a class="page-link" href="#"><i
+                                            class="la la-angle-right"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 order-lg-first">
+                        <div class="sidebar-area">
+                            <div class="widget widget-category widget-border">
+                                <h5 class="widget-title">Kategoriler</h5>
+                                <ul>
+                                    <li><a href="#">Teknolojik Aletler<i class="la la-angle-right"></i></a></li>
+                                    <li><a href="#">Giyim<i class="la la-angle-right"></i></a></li>
+                                    <li><a href="#">Aksesuar<i class="la la-angle-right"></i></a></li>
+                                    <li><a href="#">Yiyiecek<i class="la la-angle-right"></i></a></li>
+                                    <li><a href="#"><i class="la la-angle-right"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="widget widget-product-sorting widget-border">
+                                <h5 class="widget-title">Fiyata göre filtrele</h5>
+                                <div class="slider-product-sorting"></div>
+                                <div class="product-range-detail">
+                                    <button>Filtrele</button>
+                                    <input class="float-right" type="text" id="amount" readonly>
+                                    <label class="float-right" for="amount">Fiyat:</label>
+                                </div>
+                            </div>
+                            <div class="widget widget-news widget-border">
+                                <h5 class="widget-title">Son İndirimler</h5>
+                                <div class="single-news-wrap media">
+                                    <div class="thumb">
+                                        <img src="assets/img/widget/1.png" alt="img">
+                                    </div>
+                                    <div class="media-body">
+                                        <p class="date"><i class="far fa-calendar-alt"></i>25 Aug 2020</p>
+                                        <h6><a href="#">iphone 15 satışları başladı</a></h6>
+                                    </div>
+                                </div>
+                                <div class="single-news-wrap media">
+                                    <div class="thumb">
+                                        <img src="assets/img/widget/2.png" alt="img">
+                                    </div>
+                                    <div class="media-body">
+                                        <p class="date"><i class="far fa-calendar-alt"></i>25 Aug 2020</p>
+                                        <h6><a href="#"></a></h6>
+                                    </div>
+                                </div>
+                                <div class="single-news-wrap media">
+                                    <div class="thumb">
+                                        <img src="assets/img/widget/3.png" alt="img">
+                                    </div>
+                                    <div class="media-body">
+                                        <p class="date"><i class="far fa-calendar-alt"></i>25 Aug 2020</p>
+                                        <h6><a href="#"></a></h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="widget widget-tags widget-border">
+                                <h5 class="widget-title">Popüler Ürünler</h5>
+                                <div class="tagcloud">
+                                    <a href="#">Telefon</a>
+                                    <a href="#">Aksesuar</a>
+                                    <a href="#">Giyim</a>
+                                    <a href="#">Yiyecek</a>
+                                    <a href="#"></a>
+                                    <a href="#"></a>
+                                    <a href="#"></a>
+                                    <a href="#"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- blog-page area end -->
+
+        <%- include('partials/footer2') %>
+
+            <!-- back to top area start -->
+            <div class="back-to-top">
+                <span class="back-top"><i class="fa fa-angle-up"></i></span>
+            </div>
+            <!-- back to top area end -->
+
+
+            <!-- all plugins here -->
+            <script src="js/vendor.js"></script>
+            <!-- main js  -->
+            <script src="js/main.js"></script>
+</body>
+
+</html>
