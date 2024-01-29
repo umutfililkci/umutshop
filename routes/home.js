@@ -12,11 +12,19 @@ router.get("/", (req, res) => {
             name: p.name,
             image: p.image,
             provider: p.prices.sort((a, b) => a.price - b.price).at(0).provider,
-            price: p.prices.sort((a, b) => a.price - b.price).at(0).price
+            price: p.prices.sort((a, b) => a.price - b.price).at(0).price,
+            providerImage: p.prices.sort((a, b) => a.price - b.price).at(0).image
         }
     });
-    console.log(bestPriceProducts);
+    
     res.render("home", { list: bestPriceProducts })
 })
 
+router.get("/login", (req, res) => {
+    res.render("login")
+})
+
+router.get("/register", (req, res) => {
+    res.render("register")
+})
 module.exports = router;

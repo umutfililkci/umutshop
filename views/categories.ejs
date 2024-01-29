@@ -4,8 +4,12 @@
 <head>
 
     <!-- Meta & Stylesheet -->
-    <%- include('partials/metastylesheet',{title: "UMUTSHOP ALIŞVERİŞ SİTESİ" }) %>
-
+    <%- include('partials/metastylesheet',{title: "UMUTSHOP ALIŞVERİŞ SİTESİ - Ürünler" , prePath:"" }) %>
+    <style>
+        .breadcrumb-area {
+            padding: 0 0 0 0 !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -78,7 +82,7 @@
     </div>
     <!-- dkt-sitebar-menu end-->
 
-    <%- include('partials/header') %>
+    <%- include('partials/header', {prePath:""}) %>
 
         <!-- breadcrumb start -->
         <div class="breadcrumb-area" style="background-image : url(siteresim4.png)">
@@ -109,172 +113,26 @@
                             <div class="row">
                                 <!-- gallery item start here -->
 
-                                <% list.forEach(product => { %>
-                                 
-                                <% }) %>
+                                <% products.forEach(product=> { %>
 
-                                <div class="all-isotope-item col-lg-6 col-sm-6">
-                                    <div class="thumb">
-                                        <a class="gallery-fancybox" href="#">
-                                            <img src="assets/img/item/7.png" alt="image">
-                                        </a>
-                                        <a class="btn btn-white" href="#">Live Preview</a>
-                                    </div>
-                                    <div class="item-details">
-                                        <h4><a href="#">Telefonlar</a></h4>
-                                        <p>Akıllı Telefonlar</p>
-                                        <span class="ratting">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star star-o"></i>
-                                            <span>(12)</span>
-                                        </span>
-                                        <a href="#" class="author-details align-item-center">
-                                            <img src="assets/img/author/1.png" alt="img">
-                                            <span>abc</span>
-                                        </a>
-                                        <span class="price bg-white float-right">100tl</span>
-                                    </div>
-                                </div>
-                                <div class="all-isotope-item col-lg-6 col-sm-6">
-                                    <div class="thumb">
-                                        <a class="gallery-fancybox" href="#">
-                                            <img src="assets/img/item/8.png" alt="image">
-                                        </a>
-                                        <a class="btn btn-white" href="#">Live Preview</a>
-                                    </div>
-                                    <div class="item-details">
-                                        <h4><a href="#">Kulaklıklar</a></h4>
-                                        <p></p>
-                                        <span class="ratting">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star star-o"></i>
-                                            <span>(12)</span>
-                                        </span>
-                                        <a href="#" class="author-details align-item-center">
-                                            <img src="assets/img/author/2.png" alt="img">
-                                            <span>ali veli</span>
-                                        </a>
-                                        <span class="price bg-white float-right">200 tl</span>
-                                    </div>
-                                </div>
-                                <div class="all-isotope-item col-lg-6 col-sm-6">
-                                    <div class="thumb">
-                                        <a class="gallery-fancybox" href="#">
-                                            <img src="assets/img/item/9.png" alt="image">
-                                        </a>
-                                        <a class="btn btn-white" href="#">Live Preview</a>
-                                    </div>
-                                    <div class="item-details">
-                                        <h4><a href="#"></a></h4>
-                                        <p></p>
-                                        <span class="ratting">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star star-o"></i>
-                                            <span>(12)</span>
-                                        </span>
-                                        <a href="#" class="author-details align-item-center">
-                                            <img src="assets/img/author/3.png" alt="img">
-                                            <span></span>
-                                        </a>
-                                        <span class="price bg-white float-right"></span>
-                                    </div>
-                                </div>
-                                <div class="all-isotope-item col-lg-6 col-sm-6">
-                                    <div class="thumb">
-                                        <a class="gallery-fancybox" href="#">
-                                            <img src="assets/img/item/10.png" alt="image">
-                                        </a>
-                                        <a class="btn btn-white" href="#">Live Preview</a>
-                                    </div>
-                                    <div class="item-details">
-                                        <h4><a href="#"></a></h4>
-                                        <p></p>
-                                        <span class="ratting">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star star-o"></i>
-                                            <span>(12)</span>
-                                        </span>
-                                        <a href="#" class="author-details align-item-center">
-                                            <img src="assets/img/author/4.png" alt="img">
-                                            <span></span>
-                                        </a>
-                                        <span class="price bg-white float-right"></span>
-                                    </div>
-                                </div>
-                                <div class="all-isotope-item col-lg-6 col-sm-6">
-                                    <div class="thumb">
-                                        <a class="gallery-fancybox" href="#">
-                                            <img src="assets/img/item/11.png" alt="image">
-                                        </a>
-                                        <a class="btn btn-white" href="#">Live Preview</a>
-                                    </div>
-                                    <div class="item-details">
-                                        <h4><a href="#"></a></h4>
-                                        <p></p>
-                                        <span class="ratting">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star star-o"></i>
-                                            <span>(12)</span>
-                                        </span>
-                                        <a href="#" class="author-details align-item-center">
-                                            <img src="assets/img/author/5.png" alt="img">
-                                            <span></span>
-                                        </a>
-                                        <span class="price bg-white float-right"></span>
-                                    </div>
-                                </div>
-                                <div class="all-isotope-item col-lg-6 col-sm-6">
-                                    <div class="thumb">
-                                        <a class="gallery-fancybox" href="#">
-                                            <img src="assets/img/item/12.png" alt="image">
-                                        </a>
-                                        <a class="btn btn-white" href="#">Live Preview</a>
-                                    </div>
-                                    <div class="item-details">
-                                        <h4><a href="#"></a></h4>
-                                        <p></p>
-                                        <span class="ratting">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star star-o"></i>
-                                            <span>(12)</span>
-                                        </span>
-                                        <a href="#" class="author-details align-item-center">
-                                            <img src="assets/img/author/6.png" alt="img">
-                                            <span></span>
-                                        </a>
-                                        <span class="price bg-white float-right"></span>
-                                    </div>
-                                </div>
+                                    <%- include('partials/product-card', { product:product, column: 2 }) %>
+
+                                        <% }) %>
+
                             </div>
                         </div>
+
                         <div class="pagination-wrap text-center mt-2">
                             <ul class="pagination pagination-2">
-                                <li class="page-item"><a class="page-link" href="#"><i class="la la-angle-left"></i></a>
-                                </li>
-                                <li class="page-item active"><a class="page-link" href="#">01</a></li>
-                                <li class="page-item"><a class="page-link" href="#">02</a></li>
-                                <li class="page-item"><a class="page-link" href="#">03</a></li>
-                                <li class="page-item"><a class="page-link" href="#"><i
-                                            class="la la-angle-right"></i></a>
-                                </li>
+                                <!-- <li class="page-item"><a class="page-link" href="#"><i class="la la-angle-left"></i></a></li> -->
+                                <% for( let index=0; index < pageInfo.totalPage; index++ ) { let page=index+1; %>
+                                    <li class="page-item<%= page == pageInfo.page ? " active" : "" %>">
+                                        <a class="page-link" href="<%= pageInfo.params %>">
+                                            <%= page %>
+                                        </a>
+                                    </li>
+                                    <% } %>
+                                        <!-- <li class="page-item"><a class="page-link" href="#"><i class="la la-angle-right"></i></a></li> -->
                             </ul>
                         </div>
                     </div>
@@ -283,11 +141,11 @@
                             <div class="widget widget-category widget-border">
                                 <h5 class="widget-title">Kategoriler</h5>
                                 <ul>
-                                    <li><a href="#">Teknolojik Aletler<i class="la la-angle-right"></i></a></li>
-                                    <li><a href="#">Giyim<i class="la la-angle-right"></i></a></li>
-                                    <li><a href="#">Aksesuar<i class="la la-angle-right"></i></a></li>
-                                    <li><a href="#">Yiyiecek<i class="la la-angle-right"></i></a></li>
-                                    <li><a href="#"><i class="la la-angle-right"></i></a></li>
+                                    <% categories.forEach(category=> { %>
+                                        <li><a href="">
+                                                <%= category %> <i class="la la-angle-right"></i>
+                                            </a></li>
+                                        <% }) %>
                                 </ul>
                             </div>
                             <div class="widget widget-product-sorting widget-border">
@@ -297,49 +155,6 @@
                                     <button>Filtrele</button>
                                     <input class="float-right" type="text" id="amount" readonly>
                                     <label class="float-right" for="amount">Fiyat:</label>
-                                </div>
-                            </div>
-                            <div class="widget widget-news widget-border">
-                                <h5 class="widget-title">Son İndirimler</h5>
-                                <div class="single-news-wrap media">
-                                    <div class="thumb">
-                                        <img src="assets/img/widget/1.png" alt="img">
-                                    </div>
-                                    <div class="media-body">
-                                        <p class="date"><i class="far fa-calendar-alt"></i>25 Aug 2020</p>
-                                        <h6><a href="#">iphone 15 satışları başladı</a></h6>
-                                    </div>
-                                </div>
-                                <div class="single-news-wrap media">
-                                    <div class="thumb">
-                                        <img src="assets/img/widget/2.png" alt="img">
-                                    </div>
-                                    <div class="media-body">
-                                        <p class="date"><i class="far fa-calendar-alt"></i>25 Aug 2020</p>
-                                        <h6><a href="#"></a></h6>
-                                    </div>
-                                </div>
-                                <div class="single-news-wrap media">
-                                    <div class="thumb">
-                                        <img src="assets/img/widget/3.png" alt="img">
-                                    </div>
-                                    <div class="media-body">
-                                        <p class="date"><i class="far fa-calendar-alt"></i>25 Aug 2020</p>
-                                        <h6><a href="#"></a></h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="widget widget-tags widget-border">
-                                <h5 class="widget-title">Popüler Ürünler</h5>
-                                <div class="tagcloud">
-                                    <a href="#">Telefon</a>
-                                    <a href="#">Aksesuar</a>
-                                    <a href="#">Giyim</a>
-                                    <a href="#">Yiyecek</a>
-                                    <a href="#"></a>
-                                    <a href="#"></a>
-                                    <a href="#"></a>
-                                    <a href="#"></a>
                                 </div>
                             </div>
                         </div>
@@ -362,6 +177,31 @@
             <script src="js/vendor.js"></script>
             <!-- main js  -->
             <script src="js/main.js"></script>
+
+            <script>
+                var pageButtons = document.querySelectorAll(".pagination-wrap a.page-link");
+                for (let i = 0; i < pageButtons.length; i++) {
+                    const element = pageButtons[i];
+                    UpdateForPageNumber(element, i + 1);
+                }
+
+                function UpdateForPageNumber(element, page) {
+                    let query = document.location.href.replace(document.location.origin, "");
+                    if (query.indexOf("page") >= 0) {
+                        let lastIndex = query.indexOf("&") >= 0 ? query.indexOf("&") : query.length;
+                        var urlPage = query.substring(query.indexOf("page"), lastIndex);
+                        element.href = element.href.replace(urlPage, `page=${page}`);
+                    }
+                    else {
+                        if (query.indexOf("page") < 0) {
+                            element.href += `?page=${page}`;
+                        }
+                        else {
+                            element.href += `&page=${page}`;
+                        }
+                    }
+                }
+            </script>
 </body>
 
 </html>

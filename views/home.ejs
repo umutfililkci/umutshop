@@ -4,7 +4,7 @@
 <head>
 
     <!-- Meta & Stylesheet -->
-    <%- include('partials/metastylesheet',{title: "UMUTSHOP ALIŞVERİŞ SİTESİ" }) %>
+    <%- include('partials/metastylesheet',{title: "UMUTSHOP ALIŞVERİŞ SİTESİ - Anasayfa", prePath:"" }) %>
 
         <style>
             .row .banner-inner>h2,
@@ -45,53 +45,7 @@
     </div>
     <!-- dkt-sitebar-menu end-->
 
-    <!-- dkt-sitebar-menu start-->
-    <div class="dkt-sitebar-menu">
-        <div class="dkt-sitebar-menu">
-            <a class="dkt-sitebar-close" href="#"><i class="fa fa-times"></i></a>
-            <div class="dkt-details-inner">
-                <div class="logo">
-                    <a href="index.html"><img src="img/" alt="img"></a>
-                </div>
-                <p class="details">Donsectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. </p>
-                <div class="address-inner">
-                    <h5>Address</h5>
-                    <p>3538 Cambridge Place Laurel, MD 20707</p>
-                </div>
-                <div class="address-inner">
-                    <h5></h5>
-                    <p></p>
-                </div>
-                <div class="address-inner mb-0">
-                    <h5></h5>
-                    <p></p>
-                </div>
-            </div>
-            <div class="dkt-market-earn">
-                <div class="address-inner">
-                    <h5></h5>
-                    <p></p>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="earn-inner">
-                            <p></p>
-                            <h5></h5>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="earn-inner">
-                            <p></p>
-                            <h5></h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- dkt-sitebar-menu end-->
-
-    <%- include('partials/header') %>
+    <%- include('partials/header', {prePath:""}) %>
 
         <!-- banner start -->
         <div class="img/siteresim4.png">
@@ -105,7 +59,7 @@
                                 <p>Hoş geldin! En uygun fiyatları bulmak artık daha kolay. Sana özel fiyat
                                     karşılaştırmalarıyla tasarruf etmenin keyfini çıkar! </p>
                                 <div class="btn-wrap">
-                                    <a class="btn btn-base" href="#">Tüm Ürünler</a>
+                                    <a class="btn btn-base" href="/products">Tüm Ürünler</a>
                                 </div>
                             </div>
                         </div>
@@ -154,38 +108,9 @@
                         <% for( let index=0; index < list.length; index++ ) { %>
                             <% let product=list[index]; %>
 
-                                <div class="all-isotope-item col-lg-4 col-sm-6">
-                                    <div class="thumb">
-                                        <a class="gallery-fancybox" href="#">
-                                            <img src="img/item/<%= product.image %>" alt="image">
-                                        </a>
-                                        <a class="btn btn-white" href="/products/<%= product.id %>">Görüntüle</a>
-                                    </div>
-                                    <div class="item-details">
-                                        <h4><a href="#">
-                                                <%= product.name %>
-                                            </a></h4>
-                                        <p>
-                                            <%= product.category %>
-                                        </p>
-                                        <span class="ratting">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star star-o"></i>
-                                        </span>
-                                        <a href="/" class="author-details align-item-center">
-                                            <img src="img/author/1.png" alt="img">
-                                            <span>
-                                                <%= product.provider %>
-                                            </span>
-                                        </a>
-                                        <span class="price bg-white float-right">$<%= product.price %></span>
-                                    </div>
-                                </div>
+                                <%- include('partials/product-card', { product:product, column: 3 }) %>
 
-                                <% } %>
+                                    <% } %>
 
                     </div>
                 </div>

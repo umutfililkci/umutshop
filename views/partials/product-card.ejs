@@ -1,0 +1,31 @@
+<% let colLgVal=column==1 ? 12 : column==2 ? 6 : column==3 ? 4 : 3 %>
+    <div class="all-isotope-item col-lg-<%= colLgVal %> col-sm-6">
+        <div class="thumb d-flex">
+            <a class="gallery-fancybox w-100 text-center" href="#">
+                <img src="img/<%= product.image %>" alt="image" height="215">
+            </a>
+            <a class="btn btn-white" href="/products/<%= product.id %>">Görüntüle</a>
+        </div>
+        <div class="item-details">
+            <h4><a href="#">
+                    <%= product.name %>
+                </a></h4>
+            <p>
+                <%= product.category %>
+            </p>
+            <!-- <span class="ratting">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star star-o"></i>
+            </span> -->
+            <a href="/" class="author-details align-item-center">
+                <img src="img/<%= product.providerImage %>" alt="img" height="40">
+                <span>
+                    <%= product.provider %>
+                </span>
+            </a>
+            <span class="price bg-white float-right"><%= product.price %> ₺</span>
+        </div>
+    </div>

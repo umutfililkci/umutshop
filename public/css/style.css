@@ -4545,3 +4545,10 @@ footer .widget {
   background: #222933;
   color: #ffffff;
 }
+
+/* --------------- Custom Css ----------------- */
+
+.price-box {
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+  border-radius: 0.75rem!important;
+}
