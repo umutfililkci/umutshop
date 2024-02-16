@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <% let title="UMUTSHOP ALIŞVERİŞ SİTESİ - Karşılaştırma" %>
+        <!-- Meta & Stylesheet -->
+        <%- include('partials/metastylesheet',{title: title , prePath:"../" }) %>
+            <style>
+                .btn-dismatch {
+                    left: 50%;
+                    top: 30px;
+                    padding: 0px 14px;
+                    line-height: 5px;
+                    height: 40px;
+                }
+            </style>
+</head>
+
+<body>
+
+    <!-- preloader area start -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="spinner">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- preloader area end -->
+    <!-- search popup start-->
+    <div class="body-overlay" id="body-overlay"></div>
+    <div class="td-search-popup" id="td-search-popup">
+        <form action="index.html" class="search-form">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search.....">
+            </div>
+            <button type="submit" class="submit-btn"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+    <!-- dkt-sitebar-menu end-->
+
+    <%- include('partials/header', {prePath:"../"}) %>
+
+        <!-- breadcrumb start -->
+        <div class="breadcrumb-area" style="background-image:url('../img/breadcrumb/1.png');padding: 0px 0px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="breadcrumb-inner">
+                            <div class="section-title text-center">
+                                <h2 class="page-title">Products Details</h2>
+                                <ul class="page-list">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li>Pages</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- breadcrumb end -->
+
+        <!-- product-details area start -->
+        <section class="product-details pd-top-100">
+            <div class="container-fluid">
+                <div class="row row justify-content-center">
+                    <% if (products.length <=0) { %>
+                        <h2>Ürün Eklemediniz!</h2>
+                        <% } %>
+                            <% products.forEach(product=> { %>
+
+                                <div class="col-lg-3 text-center">
+                                    <button class="btn btn-dismatch" data-id="<%= product.id %>">&#10006;</button>
+                                    <div class="single-product-wrap">
+                                        <div>
+                                            <div class="thumb">
+                                                <img src="../img/<%= product.image %>" alt="image" height="250px">
+                                            </div>
+                                            <h4 class="mt-4 font-18"><a href="javascript:void:;">
+                                                    <%= product.name %>"
+                                                </a>
+                                            </h4>
+                                            <p>
+                                                <%= product.category %>"
+                                            </p>
+                                        </div>
+                                        <div class="mt-5">
+                                            <% product.prices.forEach(provider=> { %>
+                                                <div class="row justify-content-between mb-2 p-3 price-box">
+                                                    <div>
+                                                        <img src="../img/<%= provider.image %>" alt="" height="50">
+                                                        <%= provider.provider %>
+                                                    </div>
+                                                    <div class="align-self-center">
+                                                        <%= provider.price %> ₺
+                                                    </div>
+                                                </div>
+                                                <% }) %>
+                                        </div>
+                                        <div class="mt-5">
+                                            <p><span style="font-weight: bolder;" class="text-center">Özellikler</span>
+                                            </p>
+                                            <table class="table w-100">
+                                                <tbody>
+                                                    <% product.attributes.forEach(attribute=> { %>
+                                                        <tr>
+                                                            <td>
+                                                                <%= attribute.key %>
+                                                            </td>
+                                                            <td>
+                                                                <%= attribute.value %>
+                                                            </td>
+                                                        </tr>
+                                                        <% }) %>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <% }) %>
+                </div>
+            </div>
+        </section>
+
+        <%- include('partials/footer2') %>
+
+            <!-- back to top area start -->
+            <div class="back-to-top">
+                <span class="back-top"><i class="fa fa-angle-up"></i></span>
+            </div>
+            <!-- back to top area end -->
+
+
+            <!-- all plugins here -->
+            <script src="../js/vendor.js"></script>
+            <!-- main js  -->
+            <script src="../js/main.js"></script>
+            <script>
+                document.querySelectorAll(".btn-dismatch").forEach(button => {
+                    button.addEventListener("click", function (e) {
+                        var products = JSON.parse(localStorage.getItem("matches") ?? "[]");
+                        if (products.some(x => x == e.target.attributes["data-id"].value)) {
+                            var index = products.indexOf(e.target.attributes["data-id"].value);
+                            products.splice(index, 1);
+                            localStorage.setItem("matches", JSON.stringify(products));
+
+                            let base = location.pathname;
+                            location.href = base + "?products=" + products.join(",");
+                        }
+                    })
+                })
+            </script>
+</body>
+
+</html>

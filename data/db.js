@@ -42,7 +42,7 @@ var products = [
         attributes: [{ key: "İşlemci Hızı", value: "2,3 Ghz" }, { key: "Dahili Hafıza", value: "256 GB" }, { key: "Bellek", value: "8 GB" }, { key: "Batarya", value: "5000 mAh" }, { key: "Kamera", value: "108 mpx" }]
     },
     {
-        id: 4, category: "Televizyon", name: "TCL 65C745 65\"", image: "product/tcl.jpg", isHome: true, isNew: true,
+        id: 6, category: "Televizyon", name: "TCL 65C745 65\"", image: "product/tcl.jpg", isHome: true, isNew: true,
         prices: [
             { productId: 1, provider: "Trendyol", price: 44200, image: "provider/trendyol.jpg" },
             { productId: 1, provider: "Hepsiburada", price: 44300, image: "provider/hepsiburada.jpg" },
@@ -50,7 +50,7 @@ var products = [
         attributes: [{ key: "Çözünürlük", value: "4K" }, { key: "Görüntü Teknolojisi", value: "QLED" }, { key: "Derinlik", value: "314" }]
     },
     {
-        id: 5, category: "Telefon", name: "iPhone 13 Pro", image: "product/iPhone13pro.jpg", isHome: true, isNew: true,
+        id: 7, category: "Telefon", name: "iPhone 13 Pro", image: "product/iPhone13pro.jpg", isHome: true, isNew: true,
         prices: [
             { productId: 1, provider: "Trendyol", price: 68500, image: "provider/trendyol.jpg" },
             { productId: 1, provider: "Hepsiburada", price: 82000, image: "provider/hepsiburada.jpg" },

@@ -53,10 +53,10 @@ router.get("/products", (req, res) => {
 })
 
 router.get("/product-match", (req, res) => {
-
     let products = require("../data/db");
-    let product = products.find(x => x.id == req.params.id)
-    res.render("product-detail", { product: product })
+    let matchProducts = req.query.products.split(",");
+    products = products.filter(x => matchProducts.some(s => x.id == s));
+    res.render("product-match", { products: products })
 })
 
 module.exports = router;
